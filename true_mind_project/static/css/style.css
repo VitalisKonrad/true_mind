@@ -1,0 +1,159 @@
+/*!* Указываем box sizing *!*/
+/**,*/
+/**::before,*/
+/**::after {*/
+/*  box-sizing: border-box;*/
+/*}*/
+/*!* Убираем внутренние отступы *!*/
+/*ul[class],*/
+/*ol[class] {*/
+/*  padding: 0;*/
+/*}*/
+/*!* Убираем внешние отступы *!*/
+/*body,*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*p,*/
+/*ul[class],*/
+/*ol[class],*/
+/*li,*/
+/*figure,*/
+/*figcaption,*/
+/*blockquote,*/
+/*dl,*/
+/*dd {*/
+/*  margin: 0;*/
+/*}*/
+/*!* Выставляем основные настройки по-умолчанию для body *!*/
+/*body {*/
+/*  min-height: 100vh;*/
+/*  scroll-behavior: smooth;*/
+/*  text-rendering: optimizeSpeed;*/
+/*  line-height: 1.5;*/
+/*}*/
+/*!* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*!*/
+/*ul[class],*/
+/*ol[class] {*/
+/*  list-style: none;*/
+/*}*/
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+h2 {
+    margin: 0;
+}
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.main{
+    width: 100%;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+.container-left, .container-right{
+    max-width: 350px;
+}
+.container-left{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    min-width: 220px;
+    /*width: 72%;*/
+}
+.container-left-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.container-right{
+    flex-basis: 30%;
+    min-width: 300px;
+}
+
+.logo{
+    padding-top: 12px;
+    width: 60px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+.menu-nav{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: row;
+    margin-top: 5px;
+    /*border: solid 2px red;*/
+    align-items: center;
+    padding: 3px 5px;
+}
+.menu-nav:hover{
+    background-color: rgba(168, 206, 241, 0.3);
+    border-radius: 15px;
+    color: rgb(29, 160, 241);
+}
+.menu-nav_icon__home{
+    /*position: relative;*/
+    height: 30px;
+    width: 24px;
+    mask-image: url('../img/icons/home.svg');
+    mask-repeat: no-repeat;
+    background-color: #353a3e;
+    /*display: inline-block;*/
+}
+.menu-nav_icon__search{
+    height: 30px;
+    width: 24px;
+    mask-image: url('../img/icons/loupe.svg');
+    mask-repeat: no-repeat;
+    background-color: #353a3e;
+}
+.menu-nav_text{
+    margin-left: 15px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.container-center{
+    position: relative;
+    width: 570px;
+    border: solid 1px darkviolet;
+    background-color: rgb(230, 236, 240);
+}
+.container__padding{
+    padding: 0 15px;
+    background-color: white;
+}
+.container-center_header{
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 90%;*/
+    margin: 0;
+    height: 53px;
+    padding-top: 12px;
+    /*border: solid 1px darkviolet;*/
+}
+.avatar{
+    width: 49px;
+    height: 49px;
+    display: inline-block;
+    /*border-radius: 50%;*/
+}
+.makemind{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px darkviolet;
+    margin: 0;
+}
+.makemind-avatar{
+    flex-basis: 15%;
+}
+.makemind-editor{
+    flex-basis: 85%;
+}
