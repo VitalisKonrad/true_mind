@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>True Mind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="main-container">
+            <div class="container-left">
+<!--                <h2>Hello 1</h2>-->
+                <div class="container-left-top">
+                    <img src="{% static 'img/logo.png' %}" alt="True Mind logo" class="logo">
+                    <nav class="menu">
+                        <div class="menu-nav">
+                            <div class="menu-nav_icon">
+                                <div class="menu-nav_icon__home"></div>
+                            </div>
+                            <span class="menu-nav_text">Главная</span>
+                        </div>
+                        <div class="menu-nav">
+                            <div class="menu-nav_icon">
+                                <div class="menu-nav_icon__search"></div>
+                            </div>
+                            <span class="menu-nav_text">Поиск</span>
+                        </div>
+                        <div class="menu-nav">
+                            <div class="menu-nav_icon">
+                                <div class="menu-nav_icon__search"></div>
+                            </div>
+                            <span class="menu-nav_text">Уведомления</span>
+                        </div>
+                        <div class="menu-nav">
+                            <div class="menu-nav_icon">
+                                <div class="menu-nav_icon__search"></div>
+                            </div>
+                            <span class="menu-nav_text">Сообщения</span>
+                        </div>
+                        <div class="menu-nav">
+                            <div class="menu-nav_icon">
+                                <div class="menu-nav_icon__search"></div>
+                            </div>
+                            <span class="menu-nav_text">Закладки</span>
+                        </div>
+                    </nav>
+                </div>
+                <div class="container-left-bottom"></div>
+            </div>
+            <div class="container-center">
+                <div class="container-center_header container__padding">
+                    <h2 class="text-title"><a href="">Главная</a></h2>
+                </div>
+                <div class="makemind container__padding">
+                    <div class="makemind-avatar">
+                        <img src="{% static 'img/logo.png' %}" alt="avatar" class="avatar">
+                    </div>
+                    <div class="makemind-editor">
+                        <div class="makemind-editor__textarea">
+                            <form action="{% url 'reverse' %}">
+                                <textarea name="usermind" class="makemind-editor_usermind" maxlength="170" placeholder="О чём Вы думаете?"></textarea>
+                                <input class="button__makemind" type="submit" value="Mind it!">
+                            </form>
+                        </div>
+                        <div class="makemind-editor__additions"></div>
+                    </div>
+                </div>
+                <div class="container-center_userminds container__padding">
+                    <div class="usermind-viewer">
+<!--                        {% for post in MindPost %}-->
+<!--                            {{ post.body }}-->
+<!--                        {% endfor %}-->
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                    <!-- /.usermind-viewer -->
+                </div>
+                <!-- /.container-center_userminds -->
+            </div>
+            <div class="container-right">
+                 <h2>Hello 3</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

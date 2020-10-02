@@ -121,8 +121,8 @@ body {
 }
 .container-center{
     position: relative;
-    width: 570px;
-    border: solid 1px darkviolet;
+    width: 610px;
+    border: solid 1px #353b45;
     background-color: rgb(230, 236, 240);
 }
 .container__padding{
@@ -148,12 +148,41 @@ body {
 .makemind{
     display: flex;
     flex-direction: row;
-    border: solid 1px darkviolet;
-    margin: 0;
+    border: solid 1px #353b45;
+    margin: 0 0 10px 0;
 }
 .makemind-avatar{
     flex-basis: 15%;
 }
 .makemind-editor{
     flex-basis: 85%;
+}
+.makemind-editor_usermind{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: rgba(61, 71, 78, 0.8);
+    width: 100%;
+    height: 5rem;
+    resize: none;
+    border: none;
+    margin-top: 5px;
+    padding: 5px 5px 0 5px;
+}
+.button__makemind{
+    padding: 5px 25px;
+    color: white;
+    background-color: rgb(29, 160, 241);
+    border: none;
+    border-radius: 18px;
+    font-size: 24px;
+}
+.container-center_userminds{
+
+    display: flex;
+    flex-direction: row;
+    border: solid 1px #353b45;
+    margin: 0;
+    background-color: #6ca089;
+    height: 120px;
 }
