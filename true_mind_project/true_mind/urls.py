@@ -19,7 +19,7 @@ from true_mind_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('true_mind_app.urls')),
+    path('tm/', include('true_mind_app.urls')),
     # path('', views.home),
     # path('', views.reverse,  name='reverse'),
 ]
