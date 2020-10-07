@@ -25,7 +25,8 @@ SECRET_KEY = '8m!sm2soo8tdt19@8mjhv^4b*=y^f18ny13guql*yz0c_qbn^('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.10.0.130',
+                 'zamenakart.ops',]
 
 
 # Application definition
@@ -39,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +57,21 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'true_mind.urls'
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.vk.VKOAuth2',
+]
+
+SOCIAL_AUTH_POSTGRES_JSONFIELD = True
+SOCIAL_AUTH_VK_OPENAPI_APP_ID = '7363801'
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7363801' # Facebook App ID
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'k7ngIjhI3Mx20xCJjAbS' # Facebook App Secret
+SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -64,6 +83,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
             ],
         },
     },

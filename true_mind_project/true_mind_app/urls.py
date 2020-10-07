@@ -6,5 +6,5 @@ from . import views
 urlpatterns = [
     # path('', RedirectView.as_view(url='catalog/', permanent=True), views.home, name='home')
     # path('', RedirectView.as_view(url='catalog/', permanent=True)),
-    path('', views.home),
+    path('', views.minds),
 ]

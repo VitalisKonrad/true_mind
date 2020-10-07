@@ -20,6 +20,8 @@ from true_mind_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tm/', include('true_mind_app.urls')),
+    path('social-auth/', include('social_django.urls', namespace='social')),
     # path('', views.home),
     # path('', views.reverse,  name='reverse'),
 ]
+
