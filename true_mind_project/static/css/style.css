@@ -178,11 +178,10 @@ body {
     font-size: 24px;
 }
 .container-center_userminds{
-
     display: flex;
     flex-direction: row;
     border: solid 1px #353b45;
     margin: 0;
     background-color: #6ca089;
-    height: 120px;
+    /*height: 120px;*/
 }
