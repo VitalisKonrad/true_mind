@@ -25,19 +25,29 @@ SECRET_KEY = '8m!sm2soo8tdt19@8mjhv^4b*=y^f18ny13guql*yz0c_qbn^('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zamenakart.ops',]
+ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = "/tm"
 
 # Application definition
 
 INSTALLED_APPS = [
+# The following apps are required:
+    'django.contrib.auth',
+    'django.contrib.messages',
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.vk',
+
     'true_mind_app',
+    'django_extensions',
     'django.contrib.postgres',
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
 
@@ -90,6 +100,11 @@ DATABASES = {
 }
 
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -125,6 +140,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+SITE_ID = 1
+
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SECURE = True
+
+CSRF_COOKIE_HTTPONLY = True
+
+SESSION_COOKIE_HTTPONLY = True
+
+SECURE_SSL_REDIRECT = True
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

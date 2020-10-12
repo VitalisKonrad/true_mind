@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from true_mind_app import views
+# from true_mind_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tm/', include('true_mind_app.urls')),
-    path('social-auth/', include('social_django.urls', namespace='social')),
+    path('accounts/', include('allauth.urls')),
+    # path('social-auth/', include('social_django.urls', namespace='social')),
     # path('', views.home),
     # path('', views.reverse,  name='reverse'),
 ]
