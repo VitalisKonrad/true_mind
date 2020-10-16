@@ -78,7 +78,13 @@
                 <!-- /.container-center_userminds -->
             </div>
             <div class="container-right">
-                 <h2>Hello 3</h2>
+                 <h2>
+                     {% if user.is_authenticated %}
+                        Привет, {{ user.username }}
+                     {% endif %}
+                 </h2>
+                <p><a href="https://localhost:8000/accounts/login">Вход</a></p>
+                <p><a href="https://localhost:8000/accounts/logout">Выход</a></p>
             </div>
         </div>
     </div>

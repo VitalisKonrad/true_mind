@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.vk',
+    'allauth.socialaccount.providers.facebook',
 
     'true_mind_app',
     'django_extensions',
@@ -99,6 +99,7 @@ DATABASES = {
     }
 }
 
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
